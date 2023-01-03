@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+* {margin:0; padding:0; box-sizing:border-box; 
+    /* border: 1px solid red; */
+}
+#layout {width: 1920px; margin: auto;}
+html, body {font-family:"나눔고딕"; }
+img  { max-width:100%; display:block;}
+a { text-decoration: none; color: black; }
+.hidden {display: none;}
+button {background: none; border: none;}
+section {position: relative;}
+/* ::-webkit-scroll {smooths} */
+
+
+/* ------------------- */
+header {display: flex; position: fixed; width: 1920px; z-index: 5;padding: 0 100px; transition: 0.5s;}
+header h1 {flex: 1; transition: 0.5s;}
+header h1 img {height: 70px; padding: 10px 0;}
+header nav {flex: 0.8; display: flex; align-items: center;}
+header ul {flex: 1; display: flex; list-style: none; justify-content: space-around; margin-right: 30px;}
+header a { font-size: 1.2rem;  transition: 0.5s; }
+.sideMenu { display: none;}
+header button {flex: 0.1; transition: 0.5s; }
+header button a { font-size: 1.5rem;}
+
+header:hover { background: rgba(206, 100, 84, 0.6);}
+header:hover h1 {background: url(../images/logowh1.png) no-repeat 50px;}
+header:hover h1 img { opacity: 0; }
+header:hover a  { color: white;}
+header:hover button.material-symbols-outlined {
+    color: white;
+}
+
+/* ------------------- */
+#slide {
+    width:1920px; height: 1080px;
+    margin:auto; overflow: hidden;
+}
+#wineBg {position:relative; }
+#wineBg img:not(:first-of-type) {position:absolute; top: 0;}
+
+#wine {
+    position: absolute; top: 230px; left:45%;
+    width: 900px; height: 585px;
+    overflow: hidden;
+}
+#wine-img { 
+    position: relative; display: flex; width: 1000px;
+}
+#wine-img img {width: 152px; height:585px; 
+    display: inline-block; margin: 0 424px; 
+}
+
+#click button {
+    position: absolute; font-weight: bold; 
+    font-size: 5rem;background: none; border: none;
+}
+#click button:first-child {
+    left: 45%; top: 450px;
+}
+#click button:last-child {
+    right: 3%; top: 450px;
+}
+
+#pos {
+    width:100px; 
+    display:flex; justify-content:space-between; 
+    position: absolute; bottom: 10%; right:26%;
+    z-index: 1;
+}
+#pos div {
+    width:12px; height:12px; border-radius:6px; 
+    background:#333; transition:0.5s; 
+}
+#pos div.dodgerblue {background:white; width:45px;}
+
+
+
+/* ------------------- */
+#bastList { 
+    padding:25vh 0 25vh 6vw;
+    display: flex; flex-wrap: nowrap;
+}
+#bastList_text {
+    flex: 0.4; 
+    text-align: center; color: #f2685d;
+    padding: 80px 0 0 50px;  margin-right: 70px; 
+    border-left: 4px solid #f2685d; 
+    float: left; height: 60vh;
+}
+#bastList_text h3 {font-size:1.8rem; margin-bottom: 50px;}
+#bastList_text h2 {font-size: 2.8rem;padding-bottom: 10px;}
+#bastList_text p {font-style: italic;}
+#bastList_text button { font-size: 1.5rem; margin-top: 130px; }
+/* #bastList_text button:hover a {border-bottom: 2px solid black; color: black;} */
+#bastList_text a { color: #f2685d;display: inline-block; padding: 3px 40px; border-bottom: 2px solid #f2685d;}
+
+#bastList_show {
+    
+    max-width: 1390px; float: right; 
+    overflow: hidden;
+}
+#bastList_img {
+    display: flex; justify-content: space-between; 
+    position:relative; width: 1680px; height: 800px;
+    text-align: center; 
+}
+#bastList_img a {
+    display: inline-block; font-weight: bold; 
+    font-size: 1.1rem; margin-right: 6px;
+    width: 330px;
+}
+#bastList_img img {padding-left: 90px;margin-bottom: 20px;}
+#bastList_img span {display: block; font-weight: normal; font-size: 0.9rem;}
+/* ------------------- */
+
+#sec3 {width: 1920px; }
+#sec3 img { display: block; position: absolute; top: calc((100vh - 450px) / 2); left:calc((100% - 1080px) / 2) ;}
+#sec3 h2 {font-family: 'Playfair Display', serif;font-size: 7rem; text-transform:uppercase;}
+#sec3 h2:first-of-type {
+    position: absolute; top: calc(((100vh - 100px) / 2) - 270px ); left:8%;
+    
+}
+#sec3 h2:last-of-type {
+    position: absolute; top: calc(((100vh - 100px) / 2) + 100px ); right:8%;
+}
+#click {	
+	max-width:100px; position: absolute;
+    left: 47%; bottom: 150px; 
+	text-align:center;
+}
+#click i {
+	font-size:2rem; color:black; display:block;
+	animation:upDown 1s infinite; font-weight: bold;
+}
+@keyframes upDown {
+	from 	{transform:translateY(-10pt); opacity:0;}
+	to 		{transform:translateY(0pt);   opacity:1;}
+}
+
+#click a {color:black;}
+
+/* ------------------- */
+/* #sec4 {position: relative;}
+#back {
+    font-size: 15rem; color: white; text-align: center; 
+    font-weight: bold; line-height: 90%;
+    padding-top: calc((100vh - 646px) / 2); z-index: -1; 
+}
+#box {
+    display: flex; justify-content: space-around;
+    width: 1400px; height: 750px; position: absolute; 
+    top: calc(((100vh - 750px) / 2) + 30px); left: calc((100vw - 1400px) / 2);
+} */
+/* ------------------- */
+
+
+.wine-type {
+    position: relative; width: 1920px;
+    
+}
+.type-left {
+    position: absolute; top: 200px; 
+    width: 35%; left: 90px;
+}
+.type-left h2 {font: 4.5rem 'Playfair Display', serif; margin-bottom: 50px;color: #970c0c;}
+.type-left rt {display: inline-block; transform: translateX(10px); color: black; font-size: 2rem;}
+.type-left h3 {color: rgb(119, 21, 21); font-weight: bold; margin-bottom: 10px; }
+.type-left h4 { margin-bottom: 10px;font-size: 1.2rem;}
+.type-left p:first-of-type {margin-bottom: 50px;}
+.type-left p {line-height: 180%;}
+.type-left button { 
+    margin-top: 30pt; margin-left: calc((100% - 230px) / 2);
+    width: 230px; height: 42px; 
+    border-radius: 21px; background: none; 
+    border: 2px solid #333; transition: 0.5s;
+}
+.type-left button:hover {background: #333;}
+.type-left button:hover a { color: white;}
+.type-left a {text-align: center; display: block;}
+
+#red {background: url(../images/red.png) no-repeat fixed right top/auto;}
+#white {background: url(../images/white.png) no-repeat right top/auto;}
+#sparkling {background: url(../images/Sparkling.png) no-repeat right top/auto;}
+#rose {background: url(../images/rose.png) no-repeat right top/auto;}
+#sparkling h2 {letter-spacing: -2px; display: inline-block; font-size: 4rem;}
+
+
+/* ------------------- */
+/* #sec9 * { border: solid red;} */
+#sec9 {position: relative; overflow: hidden;}
+#sec9-left {
+    float: left; padding-top: 5vh;
+    position: absolute;
+    width: 1084px; height: 100vh;
+    background: #e14934;
+}
+#sec9-left>img:nth-child(1) {
+    width: 20%; 
+    margin-top: 3vh;
+    position: absolute;
+}
+#sec9-left p{
+    max-width:860px; height: 95vh;
+    display: block;
+    margin: auto; 
+    margin-top: calc((100vh - 95vh) / 2);
+}
+#sec9-left p>img {
+    display: block; margin:auto; margin-top: 5vh;
+}
+#sec9-left b {
+    font-size: 2.3rem;
+    letter-spacing:-1px;
+    position: absolute;
+    right: 40%;
+    /* bottom: calc(((100vh - 95vh) / 2) - 2vh ); */
+}
+
+#sec9-right {
+    width: 50%;
+    float: right; position: absolute; 
+    top: 0; right: 0; 
+}
+#sec9-right h2 {
+    text-align: center; display: block;
+    font-size: 5.5rem; margin-top:30vh;
+}
+#sec9-right div {
+    display: flex; justify-content: center;
+}
+#sec9-right p {
+    width: 27%;
+    text-align: justify;
+    line-height: 160%; margin-top:15px;
+}
+#sec9-right p:not(:last-child) {margin-right: 10px;}
+#sec9-right button {
+    background: none; border-radius: 18px;
+    border: 2px solid black; font-weight: bold;
+    text-align: center; transition: 0.5s;
+    margin-top: 100px; margin-left: calc((100% - 120px) / 2);
+}
+#sec9-right a {padding: 7px 35px 9px 35px; display: block;}
+#sec9-right button:hover {
+    background: #e14934; border: none;
+    
+}
+#sec9-right button:hover a {color: white;}
+
+
+
+
+
+
+
+
+
